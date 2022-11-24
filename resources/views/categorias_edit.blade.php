@@ -1,5 +1,7 @@
 <x-base>
+
     <x-slot:titulo>Editar Categoria:</x-slot:titulo>
+
     <form action='{{route('categorias.update', $categoria) }}' method='post'>
         @method('put')
         <label for='nombre'>Nombre</label>
@@ -9,9 +11,10 @@
     </form>
 
     <form action='{{route('categorias.destroy', $categoria)}}' method='post'>
-        @method('delete');
+        @method('delete')
         <input type='submit'value='Eliminar'>
     </form>
+
 </x-base>
 
 

@@ -42,7 +42,6 @@ class CategoriaController extends Controller
         $categoria = new Categoria();
         $categoria->nombre = $request->nombre;
         $categoria->save();
-
         return redirect()->route('categoria.index');
     }
 
@@ -65,7 +64,7 @@ class CategoriaController extends Controller
      */
     public function edit(Categoria $categoria)
     {
-        return view('categorias.edit', compact('categoria'));
+        return view('categorias_edit', compact('categoria'));
     }
 
     /**
@@ -77,7 +76,10 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, Categoria $categoria)
     {
-
+        $this->validate($request, ['nombre' => 'required']);
+        $categoria->nombre = $request->nombre;
+        $categoria->save();
+        return redirect()->route('categorias.index');
     }
 
     /**

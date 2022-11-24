@@ -1,5 +1,7 @@
 <x-base>
+
     <x-slot:titulo:>Nueva Categoria</x-slot:titulo:>
+
     <form action='{{route('categorias.store')}}' method='post'>
         @method('post')
         <label for='nombre'>Nombre</label>
