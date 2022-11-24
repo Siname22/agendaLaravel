@@ -9,8 +9,8 @@
     </form>
 
     <form action='{{route('categorias.edit', $categoria)}}' method='post'>
-        @method('edit')
-        <input type='submit' value='Crear Categoria'>
+        @method('get')
+        <input type='submit' value='Editar Categoria'>
     </form>
 
     <form action='{{route('categorias.destroy', $categoria)}}' method='post'>
