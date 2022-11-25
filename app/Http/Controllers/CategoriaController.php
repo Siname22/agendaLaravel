@@ -15,6 +15,7 @@ class CategoriaController extends Controller
     public function index()
     {
         $categorias = Categoria::orderBy('nombre')->get();
+
         return view('categorias_index', compact('categorias'));
     }
 
@@ -36,12 +37,12 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-                'nombre' => 'required',]
-        );
+        $this->validate($request, ['nombre' => 'required', ]);
+
         $categoria = new Categoria();
         $categoria->nombre = $request->nombre;
         $categoria->save();
+
         return redirect()->route('categorias.index');
     }
 
