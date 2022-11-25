@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\PersonaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,8 @@ use App\Http\Controllers\CategoriaController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/','paginas/zz/welcome')->name('casa');
 });
 
 Route::resource('categorias', CategoriaController::class);
+Route::resource('personas', PersonaController::class);

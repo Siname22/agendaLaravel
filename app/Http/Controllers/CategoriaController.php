@@ -16,7 +16,7 @@ class CategoriaController extends Controller
     {
         $categorias = Categoria::orderBy('nombre')->get();
 
-        return view('categorias_index', compact('categorias'));
+        return view('paginas/categorias/index', compact('categorias'));
     }
 
     /**
@@ -26,7 +26,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        return view('categorias_create');
+        return view('paginas/categorias/create');
     }
 
     /**
@@ -54,7 +54,7 @@ class CategoriaController extends Controller
      */
     public function show(Categoria $categoria)
     {
-        return view('categorias_show',compact('categoria'));
+        return view('paginas/categorias/show',compact('categoria'));
     }
 
     /**
@@ -65,7 +65,7 @@ class CategoriaController extends Controller
      */
     public function edit(Categoria $categoria)
     {
-        return view('categorias_edit', compact('categoria'));
+        return view('paginas/categorias/edit', compact('categoria'));
     }
 
     /**
