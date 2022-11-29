@@ -15,6 +15,7 @@ class PersonaController extends Controller
     public function index()
     {
         $personas = Persona::orderBy('nombre')->get();
+
         return view('paginas/personas/index',compact('personas'));
     }
 
@@ -88,15 +89,12 @@ class PersonaController extends Controller
     public function update(Request $request, Persona $persona)
     {
         $this->validate($request,
-            [
-            'nombre' => 'required',
+            ['nombre' => 'required',
             'apellidos' => 'required',
             'telefono' => 'required',
             'estrella' => 'required',
             'categoria_id' => 'required',
             ]);
-
-        $persona = new Persona();
         $persona->nombre = $request->nombre;
         $persona->apellidos = $request->apellidos;
         $persona->telefono = $request->telefono;

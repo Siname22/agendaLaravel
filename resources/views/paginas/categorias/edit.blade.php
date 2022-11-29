@@ -4,9 +4,10 @@
 
     <form action='{{route('categorias.update', $categoria) }}' method='post'>
         @method('put')
-        <label for='nombre'>Nombre</label>
-        <input id='nombre' name='nombre' type='text' value='{{$categoria->nombre}}'/>
-        <br><br>
+        <p>
+            <label for='nombre'>Nombre</label>
+            <input id='nombre' name='nombre' type='text' value='{{$categoria->nombre}}'/>
+        </p>
         <button type='submit'>Actualizar</button>
     </form>
 
