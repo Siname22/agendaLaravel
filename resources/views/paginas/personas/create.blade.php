@@ -12,8 +12,8 @@
         <input id='telefono' name='telefono' type='text' value=''/>
         <label for='estrella'>Estrella</label>
         <input id='estrella' name='estrella' type='text' value=''/>
-        <label for='categoriaId'>Categoria Id</label>
-        <input id='categoriaId' name='categoriaId' type='text' value=''/>
+        <label for='categoria_id'>Categoria Id</label>
+        <input id='categoria_id' name='categoria_id' type='text' value=''/>
         <br><br>
 
         <button type='submit'>Crear</button>

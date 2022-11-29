@@ -27,7 +27,14 @@
                 </td>
 
                 <td>
-                    <a href='{{ route('personas.show', $persona) }}'>{{ $persona->estrella }}</a>
+                    <a href='{{ route('personas.show', $persona) }}'>
+                        @if ($persona->estrella == 1)
+                            <img src='/img/estrella_llena.png' style='width: 25px'>
+                        @else
+                            <img src='/img/estrella_vacia.png' style='width: 25px'>
+                        @endif
+                    </a>
+
                 </td>
 
                 <td>

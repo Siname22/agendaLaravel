@@ -9,6 +9,7 @@
         Contenido que hay en categorias_ ...
         -->
         {{ $slot }}
+        <br>
         <x-menu/>
     </body>
 </html>
