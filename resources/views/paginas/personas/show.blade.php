@@ -11,7 +11,13 @@
         @else
             <img src='/img/estrella_vacia.png' style='width: 25px'>
         @endif</p>
-    <p>Categoria ID: {{$persona->categoria_id }}</p>
+    @foreach($categorias as $categoria)
+        @if($persona->categoria_id == $categoria->id)
+            <p>
+                Categoria: {{$categoria->nombre}}
+            </p>
+        @endif
+    @endforeach
 
     <form action='{{route('personas.update', $persona)}}' method='post'>
         @method('put')

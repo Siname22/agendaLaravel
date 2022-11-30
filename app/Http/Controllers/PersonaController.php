@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use App\Models\Persona;
 use Illuminate\Http\Request;
 
@@ -15,8 +16,8 @@ class PersonaController extends Controller
     public function index()
     {
         $personas = Persona::orderBy('nombre')->get();
-
-        return view('paginas/personas/index',compact('personas'));
+        $categorias = Categoria::orderBy('nombre')->get();
+        return view('paginas/personas/index',compact('personas','categorias'));
     }
 
     /**
@@ -26,7 +27,8 @@ class PersonaController extends Controller
      */
     public function create()
     {
-        return view('paginas/personas/create');
+        $categorias = Categoria::orderBy('nombre')->get();
+        return view('paginas/personas/create', compact('categorias'));
     }
 
     /**
@@ -65,7 +67,8 @@ class PersonaController extends Controller
      */
     public function show(Persona $persona)
     {
-        return view('paginas/personas/show',compact('persona'));
+        $categorias = Categoria::orderBy('nombre')->get();
+        return view('paginas/personas/show',compact('persona', 'categorias'));
     }
 
     /**
@@ -76,7 +79,8 @@ class PersonaController extends Controller
      */
     public function edit(Persona $persona)
     {
-        return view('paginas/personas/edit', compact('persona'));
+        $categorias = Categoria::orderBy('nombre')->get();
+        return view('paginas/personas/edit', compact('persona', 'categorias'));
     }
 
     /**

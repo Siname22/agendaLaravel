@@ -4,10 +4,10 @@
 
     <form action='{{route('categorias.store')}}' method='post'>
         @method('post')
-        <label for='nombre'>Nombre</label>
-        <input id='nombre' name='nombre' type='text' value=''/>
-        <br><br>
-
+        <p>
+            <label for='nombre'>Nombre</label>
+            <input id='nombre' name='nombre' type='text' value=''/>
+        </p>
         <button type='submit'>Crear</button>
     </form>
 

@@ -38,7 +38,13 @@
                 </td>
 
                 <td>
-                    <a href='{{ route('personas.show', $persona) }}'>{{ $persona->categoria_id }}</a>
+                    @foreach($categorias as $categoria)
+                        @if($persona->categoria_id == $categoria->id)
+                            <a href='{{ route('personas.show', $persona) }}'>
+                                {{$categoria->nombre}}
+                            </a>
+                        @endif
+                    @endforeach
                 </td>
 
                 <td>
