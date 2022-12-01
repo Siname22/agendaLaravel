@@ -120,4 +120,7 @@ class PersonaController extends Controller
         $persona->delete();
         return redirect()->route('personas.index');
     }
+    public function  update_star(){
+
+    }
 }
