@@ -27,7 +27,7 @@
                 </td>
 
                 <td>
-                    <a href='{{ route('personas.update_star', [$persona, 1-$persona->estrella]) }}'>
+                    <a href='{{ route('personas.show', [$persona,1-$persona->estrella]) }}'>
                             <img src='{{($persona->estrella == 1 ? "/img/estrella_llena.png" : "/img/estrella_vacia.png")}}' style='width: 25px'>
                     </a>
 

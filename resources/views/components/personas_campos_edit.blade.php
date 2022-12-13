@@ -15,8 +15,8 @@
     <p>
         <label for='estrella'>Estrella</label>
         <select name='estrella'>
-                <option value='0'>★</option>
-                <option value='1'>☆</option>
+                <option value='1'>★</option>
+                <option value='0'>☆</option>
         </select>
     </p>
 

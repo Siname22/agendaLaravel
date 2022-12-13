@@ -121,6 +121,6 @@ class PersonaController extends Controller
         return redirect()->route('personas.index');
     }
     public function  update_star(){
-
+        
     }
 }
